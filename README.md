@@ -7,3 +7,5 @@
 * [Git](./git.md)
 * [마크다운](./markdown.md)
 * [CSS](./css.md)
+* [TypeScript](./typescipt.md)
+* [JavaScript](./javascript.md)
