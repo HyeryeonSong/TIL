@@ -112,4 +112,45 @@ interface Car {
   wheels: number;
   start(): void;
 }
+
+class Bmw implements Car {
+  color;
+  wheels = 4;
+  constructor(c:string){
+    this.color = c;
+  }
+  start(){
+    console.log('go!');
+  }
+}
+
+const b = new Bmw('green');
+console.log(b) // Bmw: { "wheels": 4, "color": "green"}
+b.start(); // go!
+```
+
+
+### interface 확장(extends)
+```typescript
+interface Car {
+  color: string;
+  wheels: number;
+  start(): void;
+}
+
+interface Benz extends Car { // Car의 속성을 그대로 가져오고 필요한 속성은 추가로 정의
+  door: number;
+  stop(): void;
+}
+
+const benz : Benz = {  
+  door : 5,
+  stop(){
+    console.log('stop!');
+  };
+  color: 'black',
+  wheels: 4,
+  start(){}
+}
+
 ```
